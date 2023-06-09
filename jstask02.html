@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java script tut</title>
+</head>
+
+<body style="background: linear-gradient(rgb(0, 13, 255),rgb(255, 0, 85),green)">
+    <center>
+
+        <h2> filter negative number</h2>
+        <input type="number" id="num1">
+        <button type="button" onclick="filter()">check</button>
+        <h2> check no is even or odd</h2>
+        <input type="number" id="num2">
+        <button type="button" onclick="eo()">check</button>
+
+        <h2> Write an any program to compare between two numbers and also check it's data type.</h2>
+        <input type="number" id="num3">
+        <input type="number" id="num4">
+        <button type="button " onclick="finder()">check</button>
+
+        <h2> Write a JavaScript function to get the difference between a given number and 13, if the number is greater
+            than 13 return double the absolute difference.</h2>
+        <input type="number" id="num5">
+        <input type="number" id="num6">
+        <button type="button" onclick="f()">check</button>
+        <div id="result" style="border:5px solid black; height: 300px; font-size: 50px;">RESULTS</div>
+    </center>
+    <script>
+
+        function filter() {
+            let number = document.getElementById("num1").value;
+            if (number < 0) {
+                document.getElementById("result").innerHTML = "negative no:=)" + number;
+            }
+            else {
+                document.getElementById("result").innerHTML = "it is non-negative number";
+
+            }
+        }
+
+
+
+
+
+        function eo() {
+            const num = document.getElementById("num2").value;
+            console.log(num);
+            if (num % 2 == 0) {
+                console.log("check no is even ");
+                document.getElementById("result").innerHTML = "even";
+            }
+            else {
+                console.log("check no is odd ");
+                document.getElementById("result").innerHTML = "odd";
+
+            }
+        }
+        function finder() {
+            let num1 = document.getElementById("num3").value;
+
+            let num2 = document.getElementById("num4").value;
+
+            if (num1 > num2) {
+                console.log("greater number : " + num1);
+                document.getElementById("result").innerHTML = "greater number:" + num1;
+
+            }
+            else if (num1 < num2) {
+                console.log("greater number : " + num2);
+                document.getElementById("result").innerHTML = "greater number:" + num2;
+
+            }
+            else {
+                console.log("number is equal ");
+                document.getElementById("result").innerHTML = "number is equal";
+
+            }
+        }
+        function f() {
+            let num3 = document.getElementById("num5").value;
+            let num4 = document.getElementById("num6").value;
+            let result;
+            if (num3 >= num4) {
+                result = num3 - num4;
+            } else {
+                result = num4 - num3;
+            }
+            if (result > 13) {
+                document.getElementById("result").innerHTML = 2 * result;
+            } else {
+
+                document.getElementById("result").innerHTML = result;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
